@@ -1,0 +1,27 @@
+.env
+__pycache__/
+node_modules/
+dist/
+.venv/
+
+# Environment variables and secrets
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Python artifacts
+venv/
+*.py[cod]
+
+# Local databases and logs
+*.sqlite3
+*.db
+*.log
+
+# Private healthcare reports and uploaded files
+uploads/
+reports/
+patient_data/

@@ -1,0 +1,57 @@
+"""FastAPI backend.  Run:  uvicorn app.main:app --reload --port 8000"""
+from dotenv import load_dotenv
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+
+from starlette.concurrency import run_in_threadpool
+
+from .extract import ExtractError, extract_text
+from .pipeline import Pipeline
+from .samples import SAMPLES
+
+load_dotenv()  # reads backend/.env (LLM_BASE_URL, LLM_MODEL, LLM_API_KEY) before the pipeline starts
+
+app = FastAPI(title="MedTruth AI", version="0.1")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+pipeline = Pipeline()
+
+
+class AnalyzeRequest(BaseModel):
+    report_text: str = Field(..., min_length=10, max_length=20000)
+    use_llm: bool = True
+
+
+@app.get("/api/health")
+def health():
+    return {"status": "ok", "llm_enabled": pipeline.llm.enabled, "knowledge_base": pipeline.kb.meta["name"]}
+
+
+@app.get("/api/samples")
+def samples():
+    return SAMPLES
+
+
+@app.post("/api/analyze")
+def analyze_report(req: AnalyzeRequest):
+    try:
+        return pipeline.run(req.report_text, req.use_llm)
+    except ValueError as err:
+        raise HTTPException(status_code=422, detail=str(err))
+
+
+@app.post("/api/extract")
+async def extract(request: Request, filename: str = ""):
+    """Read report text from an uploaded file (raw bytes in the body; filename in the query string)."""
+    data = await request.body()
+    try:
+        # OCR is slow, so run it off the event loop
+        text = await run_in_threadpool(extract_text, data, filename)
+    except ExtractError as err:
+        raise HTTPException(status_code=422, detail=str(err))
+    return {"text": text}

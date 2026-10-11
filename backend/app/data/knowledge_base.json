@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "name": "MedTruth sample chest X-ray knowledge base",
+    "version": "0.1",
+    "source_note": "Team-written placeholder summary of general radiology knowledge. Replace with vetted references (radiology textbooks, society guidelines, patient-education pages with reuse licences) and have a clinician review it before any real use."
+  },
+  "entries": [
+    {
+      "id": "consolidation", "title": "Consolidation", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["consolidation", "consolidative", "airspace opacity", "airspace opacities", "airspace disease", "airspace consolidation", "infiltrate", "infiltrates"],
+      "summary": "Consolidation is a region of lung where the air spaces are filled with fluid, cells or other material, which appears as a dense white area on a chest X-ray. Infection is a common cause, but the X-ray appearance alone is not specific.",
+      "plain": "Consolidation means an area of the lung looks denser and whiter than usual on the X-ray, because the tiny air spaces there are filled with fluid or other material. Infection is one common cause, but the X-ray by itself cannot show the exact cause. Your doctor will connect this with your symptoms and other tests.",
+      "absent_plain": "That means the radiologist did not describe a dense area of this kind."
+    },
+    {
+      "id": "pneumonia", "title": "Pneumonia", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["pneumonia", "bronchopneumonia", "lobar pneumonia", "pneumonic"],
+      "summary": "Pneumonia is an infection of the lung tissue. On a chest X-ray it often appears as consolidation, but the diagnosis also depends on symptoms, examination and other tests.",
+      "plain": "Pneumonia is an infection in the lungs. On an X-ray it can show up as a cloudy white area. Doctors decide on a diagnosis using your symptoms, an examination and sometimes other tests, not the X-ray alone.",
+      "absent_plain": "That means the radiologist did not report signs that point to a lung infection on this X-ray."
+    },
+    {
+      "id": "pleural_effusion", "title": "Pleural effusion", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["pleural effusion", "pleural effusions", "effusion", "effusions", "pleural fluid"],
+      "patterns": ["blunting of the (?:right |left |bilateral )?costophrenic angles?", "(?:right |left )?costophrenic angle blunting", "blunted (?:right |left )?costophrenic angles?"],
+      "summary": "A pleural effusion is an abnormal collection of fluid in the pleural space between the lung and the chest wall. On a chest X-ray, a small amount may only blunt the costophrenic angle, the sharp corner at the base of the lung.",
+      "plain": "A pleural effusion is extra fluid collected around the lung, in the space between the lung and the chest wall. A small amount may only soften the sharp corner at the bottom of the lung on the X-ray. There are many possible causes, so your doctor will decide whether more tests are needed.",
+      "absent_plain": "That means the radiologist did not see extra fluid around the lung."
+    },
+    {
+      "id": "pneumothorax", "title": "Pneumothorax", "kind": "abnormal", "urgency": "prompt",
+      "terms": ["pneumothorax", "pneumothoraces"],
+      "summary": "A pneumothorax is air in the pleural space between the lung and the chest wall, which can cause part or all of the lung to collapse.",
+      "plain": "A pneumothorax means air has collected between the lung and the chest wall, which can make part of the lung shrink or collapse. Doctors usually treat this finding as time-sensitive, so contact the doctor who ordered the X-ray promptly.",
+      "absent_plain": "That means the radiologist did not see air outside the lung."
+    },
+    {
+      "id": "cardiomegaly", "title": "Cardiomegaly", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["cardiomegaly", "enlarged heart", "enlarged cardiac silhouette", "cardiac silhouette is enlarged", "heart size is enlarged", "heart is enlarged", "cardiac enlargement", "enlarged cardiomediastinal silhouette"],
+      "summary": "Cardiomegaly refers to an enlarged cardiac silhouette on a chest X-ray, often defined as a cardiothoracic ratio above 50% on a standard frontal image. Projection and patient positioning can change the apparent heart size.",
+      "plain": "Cardiomegaly means the heart shadow on the X-ray looks larger than expected. How the picture was taken can change how big the heart looks, so doctors may follow this up with other tests such as an ultrasound of the heart.",
+      "absent_plain": "That means the radiologist did not describe an enlarged heart."
+    },
+    {
+      "id": "normal_heart", "title": "Normal heart size", "kind": "normal", "urgency": "none",
+      "terms": ["normal heart size", "heart size is normal", "cardiac silhouette is normal", "normal cardiac silhouette", "normal cardiomediastinal silhouette", "cardiomediastinal silhouette is normal", "heart size within normal limits", "heart size is within normal limits", "cardiac silhouette is within normal limits", "cardiomediastinal silhouette is within normal limits", "heart is normal in size"],
+      "summary": "A normal cardiac silhouette means the outline of the heart on the X-ray is within the expected size range.",
+      "plain": "The report describes the heart shadow as a normal size on this X-ray. This describes the picture only and does not rule out every heart condition."
+    },
+    {
+      "id": "clear_lungs", "title": "Clear lungs", "kind": "normal", "urgency": "none",
+      "terms": ["lungs are clear", "clear lungs", "both lungs are clear", "lung fields are clear", "clear lung fields", "lungs are well expanded and clear", "lungs are well expanded", "lungs are well aerated"],
+      "summary": "Clear lung fields mean there is no focal opacity within the visualised lungs on the X-ray.",
+      "plain": "The report describes the lungs as clear, meaning they look evenly dark and open on this picture, as healthy lungs usually do. An X-ray can miss some problems, so this does not replace your doctor's assessment of your symptoms."
+    },
+    {
+      "id": "no_acute", "title": "No acute abnormality", "kind": "normal", "urgency": "none",
+      "terms": ["no acute cardiopulmonary abnormality", "no acute cardiopulmonary process", "no acute cardiopulmonary disease", "no acute abnormality", "no acute findings", "no active disease", "no acute disease"],
+      "summary": "A statement of no acute cardiopulmonary abnormality means the radiologist saw no new or urgent problem in the heart or lungs on this X-ray.",
+      "plain": "The report says no new or urgent problem was seen in the heart or lungs on this X-ray. An X-ray can miss some conditions, so your doctor will still consider your symptoms."
+    },
+    {
+      "id": "widened_mediastinum", "title": "Widened mediastinum", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["widened mediastinum", "mediastinal widening", "widening of the mediastinum", "enlarged mediastinum"],
+      "summary": "A widened mediastinum is an increase in the width of the central chest compartment that contains the heart, great vessels, windpipe and gullet. It has several possible causes and can sometimes be an effect of patient position.",
+      "plain": "The mediastinum is the central part of the chest between the lungs. Widening means that area looks broader than usual on the X-ray. It can have several causes, and sometimes it is due to how the picture was taken, so doctors may suggest further imaging.",
+      "absent_plain": "That means the radiologist did not describe a widened central chest area."
+    },
+    {
+      "id": "atelectasis", "title": "Atelectasis", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["atelectasis", "atelectatic", "subsegmental atelectasis", "linear atelectasis", "discoid atelectasis", "volume loss", "lung collapse"],
+      "summary": "Atelectasis is partial or complete collapse of lung tissue, which reduces the air-filled volume of the affected part of the lung. It can appear as a linear or patchy opacity with volume loss.",
+      "plain": "Atelectasis means part of the lung has become less inflated than usual, so it looks denser on the X-ray. It can happen for several reasons, such as shallow breathing or a blocked airway. Small areas are common, but your doctor will say whether any follow-up is needed.",
+      "absent_plain": "That means the radiologist did not describe an under-inflated part of the lung."
+    },
+    {
+      "id": "pulmonary_edema", "title": "Pulmonary edema", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["pulmonary edema", "pulmonary oedema", "interstitial edema", "interstitial oedema", "vascular congestion", "pulmonary vascular congestion", "pulmonary congestion"],
+      "summary": "Pulmonary edema is excess fluid in the lung tissue and air spaces, commonly related to heart conditions. It may appear as vascular congestion, interstitial thickening or bilateral airspace opacities.",
+      "plain": "Pulmonary edema means extra fluid has built up in the lungs, which can make breathing harder. It is often linked to heart problems but can have other causes. Your doctor will usually combine the X-ray with your symptoms and other tests.",
+      "absent_plain": "That means the radiologist did not describe extra fluid in the lungs."
+    },
+    {
+      "id": "nodule_mass", "title": "Nodule or mass", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["pulmonary nodule", "lung nodule", "nodule", "nodules", "nodular opacity", "mass", "masses", "lung mass", "pulmonary mass"],
+      "summary": "A pulmonary nodule is a small, roughly round opacity in the lung, usually defined as 3 cm or smaller. Larger lesions are called masses. Most nodules are benign, but follow-up imaging is often used to check them.",
+      "plain": "A nodule is a small, round spot in the lung seen on the X-ray, and a larger one is called a mass. Many nodules turn out to be harmless, but doctors usually want to look more closely, often with a CT scan or follow-up images.",
+      "absent_plain": "That means the radiologist did not describe a round spot or mass in the lungs."
+    },
+    {
+      "id": "hyperinflation", "title": "Hyperinflation", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["hyperinflation", "hyperinflated", "hyperexpanded", "emphysema", "emphysematous changes", "copd", "flattened diaphragms"],
+      "summary": "Hyperinflation describes lungs that look larger than normal on X-ray, often with flattened diaphragms. It is seen in conditions such as emphysema and COPD.",
+      "plain": "Hyperinflation means the lungs look larger and more filled with air than usual on the X-ray. It is often seen in long-term lung conditions such as emphysema or COPD. Your doctor will relate it to your symptoms and breathing tests.",
+      "absent_plain": "That means the radiologist did not describe over-inflated lungs."
+    },
+    {
+      "id": "fracture", "title": "Fracture", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["rib fracture", "rib fractures", "clavicle fracture", "fracture", "fractures", "fractured"],
+      "summary": "A fracture is a break in a bone. Rib and clavicle fractures can be seen on chest X-rays, although some rib fractures are subtle or only visible on dedicated views.",
+      "plain": "A fracture means a bone, such as a rib, shows a break or crack. Some fractures are easy to see and others are subtle. Your doctor will explain what treatment or pain control makes sense.",
+      "absent_plain": "That means the radiologist did not describe a broken bone."
+    },
+    {
+      "id": "pleural_thickening", "title": "Pleural thickening", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["pleural thickening", "pleural thickenings"],
+      "summary": "Pleural thickening is thickening of the membrane that lines the lungs and chest wall. It may follow past inflammation, infection or other exposures.",
+      "plain": "Pleural thickening means the thin lining around the lung looks thicker than usual. It can be left over from past infection or inflammation. Your doctor can tell you whether it matters in your situation.",
+      "absent_plain": "That means the radiologist did not describe a thickened lung lining."
+    },
+    {
+      "id": "hilar", "title": "Prominent hila", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["hilar enlargement", "enlarged hila", "prominent hila", "hilar prominence", "prominent hilum", "hilar lymphadenopathy"],
+      "summary": "Prominent or enlarged hila are the central areas where airways and blood vessels enter each lung looking larger than expected. Causes include enlarged blood vessels or lymph nodes.",
+      "plain": "The hila are the areas near the middle of each lung where airways and blood vessels enter. Prominent hila means these areas look larger than usual, which can be due to blood vessels or lymph glands. More imaging is sometimes suggested to find out.",
+      "absent_plain": "That means the radiologist did not describe enlarged areas near the middle of the lungs."
+    },
+    {
+      "id": "lung_markings", "title": "Increased lung markings", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["increased interstitial markings", "interstitial markings", "interstitial prominence", "interstitial thickening", "reticular opacities", "reticular pattern", "bronchovascular crowding", "prominent bronchovascular markings"],
+      "summary": "Increased interstitial or bronchovascular markings are more prominent lines through the lung on X-ray. They can be due to fluid, inflammation, scarring or technique.",
+      "plain": "Increased lung markings means the fine lines seen throughout the lungs look more prominent than usual. This can come from several things, such as fluid, inflammation, scarring or even how the X-ray was taken. Your doctor will decide if anything further is needed.",
+      "absent_plain": "That means the radiologist did not describe prominent lines through the lungs."
+    },
+    {
+      "id": "device", "title": "Medical tube or device", "kind": "device", "urgency": "none",
+      "terms": ["endotracheal tube", "tracheostomy", "central venous catheter", "central line", "picc line", "pacemaker", "chest tube", "nasogastric tube", "feeding tube", "defibrillator", "sternotomy wires"],
+      "summary": "Radiology reports note tubes, lines and implanted devices and comment on their position.",
+      "plain": "The report mentions a medical tube, line or implanted device, such as a pacemaker. Radiologists note these to confirm where they sit. If you are unsure why you have one, your care team can explain."
+    },
+    {
+      "id": "raised_diaphragm", "title": "Raised diaphragm", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["elevated hemidiaphragm", "raised hemidiaphragm", "elevated diaphragm", "raised diaphragm", "elevation of the right hemidiaphragm", "elevation of the left hemidiaphragm"],
+      "summary": "An elevated hemidiaphragm is one side of the diaphragm sitting higher than expected. It can be due to lung volume loss, nerve or abdominal causes, or normal variation.",
+      "plain": "A raised diaphragm means the muscle under the lungs sits higher than usual on one side. This can have lung, nerve or abdominal causes, and sometimes it is a normal variation. Your doctor will say whether more checks are needed.",
+      "absent_plain": "That means the radiologist did not describe a raised diaphragm."
+    },
+    {
+      "id": "granuloma", "title": "Calcified granuloma", "kind": "abnormal", "urgency": "none",
+      "terms": ["calcified granuloma", "calcified granulomas", "granuloma", "granulomas", "old granulomatous disease"],
+      "summary": "A calcified granuloma is a small calcified spot in the lung, usually the scar of a healed past infection, and is typically considered benign.",
+      "plain": "A calcified granuloma is a tiny hardened spot in the lung, usually a scar left after an old infection that has healed. These are typically harmless, but ask your doctor if you want to know more.",
+      "absent_plain": "That means the radiologist did not describe a scar spot of this kind."
+    },
+    {
+      "id": "spine_bone", "title": "Spine or bone changes", "kind": "abnormal", "urgency": "none",
+      "terms": ["scoliosis", "degenerative changes", "degenerative change", "osteophytes", "spondylosis", "kyphosis"],
+      "summary": "Reports may note curvature of the spine or age-related degenerative changes in the bones and joints visible on the chest X-ray.",
+      "plain": "The report mentions a change in the spine or bones, such as curvature or wear-and-tear changes that are common with age. These are often long-standing and may cause few problems. Ask your doctor if it relates to any pain you have.",
+      "absent_plain": "That means the radiologist did not describe changes of this kind in the spine or bones."
+    },
+    {
+      "id": "opacity", "title": "Lung opacity", "kind": "abnormal", "urgency": "discuss",
+      "terms": ["opacity", "opacities", "opacification", "haziness", "hazy opacity", "patchy opacity", "patchy opacities", "ground-glass opacity", "ground glass opacity", "ground-glass opacities", "ground glass opacities"],
+      "summary": "Opacity is a general radiology term for an area that appears whiter than normal lung on an X-ray. It is descriptive and does not by itself indicate the cause.",
+      "plain": "Opacity is a radiology word for a part of the lung that looks whiter or cloudier than the surrounding lung on the X-ray. It describes how the picture looks rather than the cause, so your doctor will use your symptoms and other tests to work out what it means.",
+      "absent_plain": "That means the radiologist did not describe a whiter or cloudier area of lung."
+    }
+  ]
+}
