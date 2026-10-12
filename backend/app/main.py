@@ -1,4 +1,3 @@
-```python
 """FastAPI backend. Run: uvicorn app.main:app --reload --port 8000"""
 
 from pathlib import Path
