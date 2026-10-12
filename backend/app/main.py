@@ -81,4 +81,3 @@ if frontend_dist.is_dir():
         StaticFiles(directory=str(frontend_dist), html=True),
         name="frontend",
     )
-```
