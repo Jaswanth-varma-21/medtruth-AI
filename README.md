@@ -107,3 +107,9 @@ before analysing, since OCR can misread words.
     backend/app/llm.py                   optional OpenAI-compatible client
     backend/tests/test_pipeline.py       unit tests
     frontend/src/App.jsx, styles.css     React interface
+
+## Multi-X-ray design
+
+The proposed roadmap covers four separate pathways: chest, bones and joints, spine, and dental X-rays. Each pathway must use a task-appropriate model, document its supported inputs, and pass its own evaluation. The design is documented in [docs/MULTI_XRAY_DESIGN.md](docs/MULTI_XRAY_DESIGN.md).
+
+**Current status:** this is a design and implementation plan, not a claim that all four specialty models are integrated or clinically validated. AI-generated image findings must be clearly labelled, unsupported inputs must fail safely, and outputs require appropriate clinical review.
